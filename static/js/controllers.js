@@ -35,7 +35,7 @@ ConsoleModule.controller('wcontroller', ['$scope', '$http', '$routeParams', '$ti
         if(data.length > 1) { //need to change this 
             $http({
                 method: "GET",
-                url: '/api/v1/getWeather?q=' + data
+                url: '/api/v1/getWeather?zip=' + data
             }).then( function(response) {
                 if(which === 1) {
                   //  $scope.zip1City = response.data.city;
