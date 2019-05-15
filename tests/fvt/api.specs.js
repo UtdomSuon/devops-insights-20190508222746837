@@ -60,7 +60,7 @@
         }
         request({
       		method: 'GET',
-              url: appUrl + '/api/v1/getWeather?zip=2103' //2103 is auckland zip code 
+              url: appUrl + '/api/v1/getWeather?zip=1041' //2103 is auckland zip code 
           }, function(err, resp, body) {
           	if(err) {
           		assert.fail('Failed to get the response');
