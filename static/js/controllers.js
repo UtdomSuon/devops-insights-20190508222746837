@@ -81,15 +81,34 @@ ConsoleModule.controller('wcontroller', ['$scope', '$http', '$routeParams', '$ti
     };
     
 }]);
-/*
+
 angular.module('map-example', []).controller('MapController', function($scope, $rootScope, $compile) {
+	/*
 	function initMap(){
 	$scope.map = new google.maps.Map(document.getElementById('map'), {
           center: {lat: -37.7870, lng: 175.2793},
           zoom: 8
         });
-	}
+	}*/
 	
 	// google.maps.event.addDomListener(window, 'load', initMap);
+	
+	$scope.initialize = function() {
+        $scope.mapOptions = {
+            zoom: 8,
+            center: new google.maps.LatLng(-37.7870, 175.2793)
+        };
+        $scope.map = new google.maps.Map(document.getElementById('googleMap'), $scope.mapOptions);
+    }
+
+    $scope.loadScript = function() {
+        var script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = 'https://maps.google.com/maps/api/js?key=AIzaSyCJomwbtgdsoTEmTO8EnXDY1pXXm8wnkqI&callback=initialize';
+        document.body.appendChild(script);
+        setTimeout(function() {
+            $scope.initialize();
+        }, 500);
+    }
 });
-*/
+
