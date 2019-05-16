@@ -28,15 +28,6 @@ ConsoleModule.controller('wcontroller', ['$scope', '$http', '$routeParams', '$ti
  //   $scope.zip1City = "";
     $scope.zip1Weather = "";
 
-function initMap(){
-	$scope.map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: -37.7870, lng: 175.2793},
-          zoom: 8
-        });
-    }
-
-
-
     $scope.zip = function(which) {
 
         var data = "";
@@ -91,4 +82,12 @@ function initMap(){
     
 }]);
 
+angular.module('map-example', []).controller('MapController', function($scope, $rootScope, $compile) {
+	function initMap(){
+	$scope.map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -37.7870, lng: 175.2793},
+          zoom: 8
+        });
+	}
+});
 
