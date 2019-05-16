@@ -89,5 +89,7 @@ angular.module('map-example', []).controller('MapController', function($scope, $
           zoom: 8
         });
 	}
+	
+	 google.maps.event.addDomListener(window, 'load', initMap);
 });
 
