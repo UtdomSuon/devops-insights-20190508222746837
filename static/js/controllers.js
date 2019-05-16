@@ -1,3 +1,16 @@
+//google maps api key: AIzaSyCnQb9Cz8W9drHJMGHgaLUHQMyYCN3vlsg
+//shoul probbaly store this in a better place 
+//-37.7870, 175.2793
+
+var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -37.7870, lng: 175.2793},
+          zoom: 8
+        });
+      }
+
+
 
 var ConsoleModule = angular.module('ConsoleModule', ['ngRoute']);
 
@@ -32,10 +45,11 @@ ConsoleModule.controller('wcontroller', ['$scope', '$http', '$routeParams', '$ti
 
 
 		//if(data.length === 4) initially
-        if(data.length > 1) { //need to change this 
+        if(data.length > 1) { //need to refactor this because it sends a request everytime the field has more than 1 character
             $http({
                 method: "GET",
-                url: '/api/v1/getWeather?zip=' + data
+                url: '/api/v1/getWeather?zip=' + data //ok so using ZIP as a variable lets us enter both zip codes and city names, 
+                
             }).then( function(response) {
                 if(which === 1) {
                   //  $scope.zip1City = response.data.city;
