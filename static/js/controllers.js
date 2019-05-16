@@ -43,7 +43,7 @@ ConsoleModule.controller('wcontroller', ['$scope', '$http', '$routeParams', '$ti
 
 
 		//if(data.length === 4) initially
-        if(data.length > 1) { //need to refactor this because it sends a request everytime the field has more than 1 character
+        if(data.length > 3) { //just going to leave it at 3 as it should be a safe number 
             $http({
                 method: "GET",
                 url: '/api/v1/getWeather?zip=' + data //ok so using ZIP as a variable lets us enter both zip codes and city names, 
