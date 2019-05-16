@@ -13,13 +13,13 @@ ConsoleModule.config(['$routeProvider', '$locationProvider','$sceDelegateProvide
         controllerAs: 'wcontroller'
     });
 }]);
-
+/*
 var map;
 map = new google.maps.Map(document.getElementById('map'), {
           center: {lat: -37.7870, lng: 175.2793},
           zoom: 8
         });
-      
+      */
 
 ConsoleModule.controller('wcontroller', ['$scope', '$http', '$routeParams', '$timeout', '$sce',
     function($scope, $http, $routeParams, $timeout, $sce) {
