@@ -104,7 +104,7 @@ angular.module('map-example', []).controller('MapController', function($scope, $
     $scope.loadScript = function() {
         var script = document.createElement('script');
         script.type = 'text/javascript';
-        script.src = 'https://maps.google.com/maps/api/js?key=AIzaSyCJomwbtgdsoTEmTO8EnXDY1pXXm8wnkqI&callback=initialize';
+        script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCJomwbtgdsoTEmTO8EnXDY1pXXm8wnkqI&callback=initialize';
         document.body.appendChild(script);
         setTimeout(function() {
             $scope.initialize();
