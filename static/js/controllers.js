@@ -81,7 +81,7 @@ ConsoleModule.controller('wcontroller', ['$scope', '$http', '$routeParams', '$ti
     };
     
 }]);
-
+/*
 angular.module('map-example', []).controller('MapController', function($scope, $rootScope, $compile) {
 	function initMap(){
 	$scope.map = new google.maps.Map(document.getElementById('map'), {
@@ -90,6 +90,6 @@ angular.module('map-example', []).controller('MapController', function($scope, $
         });
 	}
 	
-	 google.maps.event.addDomListener(window, 'load', initMap);
+	// google.maps.event.addDomListener(window, 'load', initMap);
 });
-
+*/
