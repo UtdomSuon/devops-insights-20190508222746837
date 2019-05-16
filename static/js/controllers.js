@@ -1,4 +1,4 @@
-//google maps api key: AIzaSyCnQb9Cz8W9drHJMGHgaLUHQMyYCN3vlsg
+//google maps api key: AIzaSyCJomwbtgdsoTEmTO8EnXDY1pXXm8wnkqI
 //shoul probbaly store this in a better place 
 //-37.7870, 175.2793
 
