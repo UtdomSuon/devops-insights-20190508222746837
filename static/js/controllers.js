@@ -99,7 +99,7 @@ angular.module('map-example', []).controller('MapController', function($scope, $
             center: new google.maps.LatLng(-37.7870, 175.2793)
         };
         $scope.map = new google.maps.Map(document.getElementById('googleMap'), $scope.mapOptions);
-    }
+    };
 
     $scope.loadScript = function() {
         var script = document.createElement('script');
@@ -109,6 +109,6 @@ angular.module('map-example', []).controller('MapController', function($scope, $
         setTimeout(function() {
             $scope.initialize();
         }, 500);
-    }
+    };
 });
 
