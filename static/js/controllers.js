@@ -95,10 +95,10 @@ angular.module('map-example', []).controller('MapController', function($scope, $
 	
 	$scope.initialize = function() {
         $scope.mapOptions = {
-            zoom: 8,
-            center: new google.maps.LatLng(-37.7870, 175.2793)
+            center: new google.maps.LatLng(-37.7870, 175.2793),
+            zoom: 8
         };
-        $scope.map = new google.maps.Map(document.getElementById('googleMap'), $scope.mapOptions);
+        $scope.map = new google.maps.Map(document.getElementById('map'), $scope.mapOptions);
     };
 
     $scope.loadScript = function() {
