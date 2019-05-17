@@ -13,6 +13,7 @@
 
     var appUrl = process.env.APP_URL;
 
+//there should be an invalid city name (not empty) test 
     describe('Get Weather', function() {
 
     	it('with valid zip(Name) code', function(done) {

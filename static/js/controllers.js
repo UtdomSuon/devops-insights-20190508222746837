@@ -55,7 +55,7 @@ ConsoleModule.controller('wcontroller', ['$scope', '$http', '$routeParams', '$ti
                 } else if(which === 2) {
                     $scope.zip2City = response.data.city;
                     $scope.zip2Weather = response.data.weather;
-                    console.log($scope.zip2City);
+                    console.log($scope.zip2City); //this does get the city we entered
                 } else if(which === 3) {
                    // $scope.zip3City = response.data.city;
                     $scope.zip3Weather = response.data.weather;
@@ -81,8 +81,7 @@ ConsoleModule.controller('wcontroller', ['$scope', '$http', '$routeParams', '$ti
         }
     };
     
-	//console.log($scope.zip2Weather);
-	//console.log($scope.zip2City);
+	//might need a geocoder to get the location instead 
 	
 	$scope.initialize = function() {
         $scope.mapOptions = {
