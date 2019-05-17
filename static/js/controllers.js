@@ -53,7 +53,7 @@ ConsoleModule.controller('wcontroller', ['$scope', '$http', '$routeParams', '$ti
                   //  $scope.zip1City = response.data.city;
                     $scope.zip1Weather = response.data.weather;
                 } else if(which === 2) {
-                   // $scope.zip2City = response.data.city;
+                    $scope.zip2City = response.data.city;
                     $scope.zip2Weather = response.data.weather;
                 } else if(which === 3) {
                    // $scope.zip3City = response.data.city;
@@ -80,7 +80,8 @@ ConsoleModule.controller('wcontroller', ['$scope', '$http', '$routeParams', '$ti
         }
     };
     
-	console.log("If this runs, what solutions can I look at...");
+	console.log($scope.zip2Weather);
+	console.log($scope.zip2City);
 	
 	$scope.initialize = function() {
         $scope.mapOptions = {
@@ -99,38 +100,13 @@ ConsoleModule.controller('wcontroller', ['$scope', '$http', '$routeParams', '$ti
             $scope.initialize();
         }, 500);
     };
-    
+    /*
+   var marker = new google.maps.Marker({
+      position: new google.maps.LatLng(),
+      map: $scope.map
+    });
+    */
 }]);
 
-angular.module('map-example', []).controller('MapController', function($scope, $rootScope, $compile) {
-	/*
-	function initMap(){
-	$scope.map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: -37.7870, lng: 175.2793},
-          zoom: 8
-        });
-	}
-	
-	// google.maps.event.addDomListener(window, 'load', initMap);
-	
-	console.log("If this runs, what solutions can I look at...");
-	
-	$scope.initialize = function() {
-        $scope.mapOptions = {
-            center: new google.maps.LatLng(-37.7870, 175.2793),
-            zoom: 8
-        };
-        $scope.map = new google.maps.Map(document.getElementById('map'), $scope.mapOptions);
-    };
 
-    $scope.loadScript = function() {
-        var script = document.createElement('script');
-        script.type = 'text/javascript';
-        script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCJomwbtgdsoTEmTO8EnXDY1pXXm8wnkqI&callback=initialize';
-        document.body.appendChild(script);
-        setTimeout(function() {
-            $scope.initialize();
-        }, 500);
-    };*/
-});
 
