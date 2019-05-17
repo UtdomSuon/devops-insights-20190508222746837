@@ -80,6 +80,26 @@ ConsoleModule.controller('wcontroller', ['$scope', '$http', '$routeParams', '$ti
         }
     };
     
+	console.log("If this runs, what solutions can I look at...");
+	
+	$scope.initialize = function() {
+        $scope.mapOptions = {
+            center: new google.maps.LatLng(-37.7870, 175.2793),
+            zoom: 8
+        };
+        $scope.map = new google.maps.Map(document.getElementById('map'), $scope.mapOptions);
+    };
+
+    $scope.loadScript = function() {
+        var script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCJomwbtgdsoTEmTO8EnXDY1pXXm8wnkqI&callback=initialize';
+        document.body.appendChild(script);
+        setTimeout(function() {
+            $scope.initialize();
+        }, 500);
+    };
+    
 }]);
 
 angular.module('map-example', []).controller('MapController', function($scope, $rootScope, $compile) {
@@ -89,7 +109,7 @@ angular.module('map-example', []).controller('MapController', function($scope, $
           center: {lat: -37.7870, lng: 175.2793},
           zoom: 8
         });
-	}*/
+	}
 	
 	// google.maps.event.addDomListener(window, 'load', initMap);
 	
@@ -111,6 +131,6 @@ angular.module('map-example', []).controller('MapController', function($scope, $
         setTimeout(function() {
             $scope.initialize();
         }, 500);
-    };
+    };*/
 });
 
