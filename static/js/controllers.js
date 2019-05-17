@@ -93,6 +93,8 @@ angular.module('map-example', []).controller('MapController', function($scope, $
 	
 	// google.maps.event.addDomListener(window, 'load', initMap);
 	
+	console.log("If this runs, what solutions can I look at...");
+	
 	$scope.initialize = function() {
         $scope.mapOptions = {
             center: new google.maps.LatLng(-37.7870, 175.2793),
